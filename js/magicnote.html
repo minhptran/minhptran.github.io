@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<HTML>
+    <header>
+        <style>
+
+            .add-note-form {
+                border-style: groove;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .add-note-form textarea {
+                width: 100%;
+
+            }
+            .add-note-form button, .notes button {
+                padding: 10px ;
+                margin: 10px 0px;
+                background-color: blue;
+                color: white;
+
+            }
+            .notes {
+                display: flex;
+                width: 100%;
+            }
+            .notes > div {
+                border: groove;
+                padding: 10px;
+                width: 200px;
+                margin: 0px 20px;
+            }
+        </style>
+        <script>
+            function addNote() {
+                
+                let note = document.getElementById("txtAddnote").value;
+                const node1 = document.createElement("div");
+                node1.id = 'note' + (number+1)
+                const node2 = document.createElement("h3");
+                let numb = document.getElementById("notess").childElementCount;
+                node2.innerText = `Note ${numb+1}`;
+                const node3 = document.createElement("p");
+                node3.innerText = note;
+                const node4 = document.createElement("button");
+                node4.onclick = function() {   
+                    this.parentElement.remove();
+                };
+                node4.innerText = 'Delete Note';
+                node1.appendChild(node2);
+                node1.appendChild(node3);
+                node1.appendChild(node4);
+                const notes = document.getElementById('notess');
+                notes.appendChild(node1);
+  
+            }
+            function deleteNote(number) {
+                console.log(number);
+            }
+        </script>
+    </header>
+    <body>
+        <hr>
+        <h1> Welcome to Magic Notes</h1>
+        <div class="add-note-form">
+            <h3>Add a note</h3>
+            <textarea rows="3" id="txtAddnote"></textarea>
+            <button onclick="addNote()">Add Note</button>
+        </div>
+        <hr>
+        <h1>Your Notes</h1>
+        <hr>
+        <div class="notes" id ="notess">
+            
+        </div>
+    </body>
+</HTML>
