@@ -35,9 +35,9 @@
                 
                 let note = document.getElementById("txtAddnote").value;
                 const node1 = document.createElement("div");
-                node1.id = 'note' + (number+1)
-                const node2 = document.createElement("h3");
                 let numb = document.getElementById("notess").childElementCount;
+                node1.id = 'note' + (numb+1)
+                const node2 = document.createElement("h3");
                 node2.innerText = `Note ${numb+1}`;
                 const node3 = document.createElement("p");
                 node3.innerText = note;
