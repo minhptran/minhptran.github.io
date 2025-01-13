@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .card {
+                width: 100px;
+            }
+        </style>
+        <script>
+            function addCards() {
+                const suits = ["spades", "diamonds", "hearts", "clubs"];
+                const values = [ "ace", "2", "3", "4", "5", "6", "7", "8", "9","10","jack", "queen", "king",];
+
+
+                for (let suitIndex = 0; suitIndex < suits.length; suitIndex++) {
+                    for (let valueIndex = 0; valueIndex < values.length; valueIndex++) {
+                        value = values[valueIndex];
+                        suit = suits[suitIndex];
+                        var img = document.createElement('img');
+                        img.src = '/images/cards/' + value + '_of_' + suit + '.png';
+                        img.className = "card";
+
+                        container = document.getElementById("cards");
+                        container.appendChild(img);
+                    }
+                }
+                
+                
+            }
+        </script>
+    </head>
+    <body> 
+        <div id ="cards">
+        </div>
+        <button onclick="addCards()">Add cards</button>
+    </body>
+</html>
