@@ -1201,7 +1201,48 @@ div#particles-box {
     margin: 0 0 25px;
   }
 }
+.home-banner-01 {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+}
 
+.home-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-text h4 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.home-text h5 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.home-text p {
+  font-size: 20px;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+
+.btn-bar {
+  margin-top: 20px;
+}
+
+.btn-bar .m-btn {
+  background-color: #00c1d4;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
 
 /*-----------------------------------------
 *  About Us
@@ -1258,6 +1299,12 @@ div#particles-box {
 /*-----------------------------------------
 *  About Us Section
 -----------------------------------------*/
+.aboutus-section img {
+  width: 20%; /* Restricts the image width to 20% of the parent container */
+  height: auto; /* Ensures the aspect ratio is preserved */
+  display: block; /* Centers the image if needed */
+  margin: 0 auto; /* Horizontally centers the image */
+}
  .aboutus-section {
   position: relative;
  }
